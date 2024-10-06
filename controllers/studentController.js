@@ -1,6 +1,6 @@
 const Student = require('../models/Student');
 
-// @desc Get all students
+//Get all students
 exports.getStudents = async (req, res) => {
   try {
     const students = await Student.find();
@@ -10,7 +10,7 @@ exports.getStudents = async (req, res) => {
   }
 };
 
-// @desc Create a new student
+//Create a new student
 exports.createStudent = async (req, res) => {
   const { name, email, age } = req.body;
   try {
@@ -22,7 +22,7 @@ exports.createStudent = async (req, res) => {
   }
 };
 
-// @desc Update a student by ID
+//Update a student
 exports.updateStudent = async (req, res) => {
   const { id } = req.params;
   const { name, email, age } = req.body;
